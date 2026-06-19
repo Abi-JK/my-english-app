@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraEnglish — Master Communication & MNC Interview Prep</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <i data-lucide="sparkles" class="brand-icon"></i>
+                </div>
+                <span class="brand-name">Aura<span>English</span></span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-target="dashboard">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </button>
+                <button class="nav-item" data-target="conversation">
+                    <i data-lucide="message-square-code"></i>
+                    <span>Role-Play & Speech</span>
+                </button>
+                <button class="nav-item" data-target="interview">
+                    <i data-lucide="briefcase"></i>
+                    <span>MNC Interview Prep</span>
+                </button>
+                <button class="nav-item" data-target="exams">
+                    <i data-lucide="award"></i>
+                    <span>Exam Center</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-user">
+                <div class="user-avatar">
+                    <i data-lucide="user"></i>
+                </div>
+                <div class="user-info">
+                    <span class="user-name" id="user-name-display">Learner</span>
+                    <span class="user-level" id="user-level-display">Level 1 (Novice)</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Mobile Header -->
+        <header class="mobile-header">
+            <button class="menu-toggle" id="menu-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+            <div class="mobile-brand">
+                <i data-lucide="sparkles" class="brand-icon"></i>
+                <span>AuraEnglish</span>
+            </div>
+            <div class="user-avatar-mobile">
+                <i data-lucide="user"></i>
+            </div>
+        </header>
+
+        <!-- Main Viewport -->
+        <main class="main-viewport">
+            <header class="viewport-header">
+                <div class="header-search">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input type="text" placeholder="Search lessons, quizzes..." disabled>
+                </div>
+                <div class="header-actions">
+                    <div class="streak-badge">
+                        <i data-lucide="flame" class="streak-icon"></i>
+                        <span id="streak-count">0 Days</span>
+                    </div>
+                    <div class="xp-badge">
+                        <i data-lucide="zap" class="xp-icon"></i>
+                        <span id="xp-count">0 XP</span>
+                    </div>
+                    <button class="theme-toggle-btn" id="theme-toggle" title="Toggle Theme">
+                        <i data-lucide="moon" id="theme-icon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <div class="view-content" id="view-content">
+                <!-- Content will be injected dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast hidden">
+        <i data-lucide="info" id="toast-icon"></i>
+        <span id="toast-message">Notification message</span>
+    </div>
+
+    <!-- Router and Modules Script -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
